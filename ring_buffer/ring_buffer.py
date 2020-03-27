@@ -9,6 +9,24 @@ class RingBuffer:
 
     def append(self, item):
         # print(f"cap: {self.capacity} | store: {self.storage.length} | item: {item}")
+
+        # this fails
+        # if at cap
+        # if self.storage.length > self.capacity:
+        #     # set new val to current
+        #     self.current.value = item
+        #     # move current
+        #     self.current = self.current.next
+        # # if not at cap
+        # else:
+        #     # add item
+        #     self.storage.add_to_tail(item)
+        #     # move older items
+        #     self.storage.head.prev = self.storage.tail
+        #     self.storage.tail.next = self.storage.head
+        #     # set current item to head
+        #     self.current = self.storage.head
+
         # if not at cap
         if self.storage.length < self.capacity:
             # add item
